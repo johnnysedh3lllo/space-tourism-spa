@@ -1,0 +1,73 @@
+/* Box sizing, margin and padding rules*/
+*,
+*::before,
+*::after {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  outline-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+*:focus-visible {
+  outline: 1px solid black;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html {
+  scroll-padding-block-start: 5rem;
+}
+
+/* Set core root defaults */
+html,
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+/* Set core body defaults */
+body {
+  min-block-size: 100vh;
+  inline-size: 100%;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* prevents outline on pseudo classes on anchor links */
+a:focus,
+a:visited,
+a:active {
+  outline-color: transparent;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-inline-size: 100%;
+  block-size: auto;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons and prevent blue highlight box */
+input,
+button,
+textarea,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
+  font: inherit;
+  outline: transparent;
+}
