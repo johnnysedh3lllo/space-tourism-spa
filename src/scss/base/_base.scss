@@ -1,0 +1,79 @@
+body {
+  background-color: $clr-blue-dark;
+  background: url("../assets/home/background-home-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  color: $clr-white-100;
+  position: relative;
+}
+
+* {
+  // outline: 1px solid rgb(255, 255, 255);
+}
+
+#app {
+  padding-block-start: 5.5rem;
+  min-height: 100vh;
+}
+
+#app:has(.header) {
+  display: $display--flex;
+}
+
+.hr {
+  display: none;
+}
+
+.nav {
+  .container {
+    background-color: $clr-white-600;
+    box-shadow: 0 4px 30px $clr-white-500;
+    backdrop-filter: blur(20px);
+    --webkit-backdrop-filter: blur(20px);
+    transition: translate 0.5s;
+  }
+}
+
+.translate {
+  translate: 100% 0;
+}
+
+@media (min-width: 768px) {
+  body {
+    position: static;
+    background-color: $clr-blue-dark;
+    background: url("../assets/home/background-home-tablet.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+  }
+
+  #app {
+    padding-block-start: 6.5rem;
+  }
+
+  .translate {
+    translate: 0;
+  }
+}
+
+// @media (min-width: 1440px) {
+// }
+
+@media (min-width: 1366px) {
+  .hr {
+    display: block;
+    width: 100%;
+    background-color: $clr-white-600;
+    height: 1px;
+  }
+
+  body {
+    background-color: $clr-blue-dark;
+    background: url("../assets/home/background-home-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+  }
+}

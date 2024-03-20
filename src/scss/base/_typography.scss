@@ -1,0 +1,110 @@
+.body {
+  font-family: $ff-primary;
+}
+
+.nav {
+  font-family: $ff-secondary;
+  &__list {
+    &__item {
+      letter-spacing: $ltr-spacing-200;
+      &__number {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.header {
+  &__main {
+    &__sub-head,
+    &__head {
+      text-transform: uppercase;
+    }
+
+    &__sub-head {
+      font-weight: $fw-400;
+      font-family: $ff-secondary;
+      letter-spacing: $ltr-spacing-200;
+      font-size: $fs-body-200;
+      color: $clr-blue-light;
+    }
+
+    &__head {
+      font-size: $fs-head-300;
+      font-weight: $fw-400;
+    }
+
+    &__par {
+      font-family: $ff-secondary;
+      font-size: $fs-body-300;
+      font-weight: $fw-400;
+      line-height: 1.5625rem;
+    }
+  }
+}
+
+.btn {
+  &--header {
+    font-size: $fs-body-100;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav {
+    font-size: $fs-head-sub-800;
+  }
+
+  .header {
+    &__main {
+      &__sub-head {
+        font-size: $fs-body-100;
+      }
+
+      &__head {
+        font-size: $fs-head-100;
+      }
+
+      &__par {
+        font-size: $fs-body-200;
+        line-height: 1.75rem;
+      }
+    }
+  }
+
+  .btn {
+    &--header {
+      font-size: $fs-head-500;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .nav {
+    font-size: $fs-body-200;
+  }
+
+  .header {
+    &__main {
+      &__sub-head {
+        font-size: $fs-head-sub-600;
+        letter-spacing: 4.72px;
+      }
+
+      &__head {
+        font-size: $fs-head-100;
+      }
+
+      &__par {
+        font-size: $fs-head-sub-700;
+        line-height: 1.75rem;
+      }
+    }
+  }
+
+  .btn {
+    &--header {
+      font-size: $fs-head-500;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.header {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  display: $display--grid;
+  inline-size: 100%;
+  justify-items: center;
+  gap: 5.0625rem;
+  &__main {
+    inline-size: min(100%, 450px);
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding-block-end: 5.625rem;
+  }
+}
+
+@media (min-width: 1366px) {
+  .header {
+    text-align: start;
+    display: $display--flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 0 10.3125rem 8.1875rem;
+  }
+}

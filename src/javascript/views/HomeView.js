@@ -1,18 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
+"use strict";
+import TemplateView from "./TemplateView";
+import JSONData from "../../../data.json";
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+console.log(JSONData);
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-
-    <title>Frontend Mentor | Space tourism website</title>
-</head>
-
-<body>
-
-    <header class="header">
+export default class extends TemplateView {
+  constructor() {
+    super();
+    this.setTitle("HOME");
+  }
+  async getHtml() {
+    return `
+      <header class="header">
 
         <section class="header__main">
             <h5 class="header__main__sub-head">So, you want to travel to</h5>
@@ -25,8 +24,7 @@
         </section>
 
         <button class="btn btn--header">Explore</button>
-    </header>
-
-</body>
-
-</html>
+      </header>
+        `;
+  }
+}

@@ -1,0 +1,38 @@
+// COLORS
+$clr-white-100: hsl(0, 0%, 100%);
+$clr-white-200: hsla(0, 0%, 100%, 0.505);
+$clr-white-300: hsla(0, 0%, 100%, 0.25);
+$clr-white-400: hsla(0, 0%, 100%, 0.174);
+$clr-white-500: rgba(255, 255, 255, 0.1);
+$clr-white-600: hsla(0, 0%, 100%, 0.04);
+
+$clr-blue-dark: hsl(230, 35%, 7%);
+$clr-blue-light: hsl(231, 77%, 90%);
+$clr-grey: hsl(0, 0%, 59%);
+
+// TYPOGRAPHY
+$ff-primary: "Bellefair", serif;
+$ff-secondary: "Barlow Condensed", sans-serif;
+
+$fw-400: 400;
+$fw-700: 700;
+
+$fs-head-100: 9.375rem;
+$fs-head-200: 6.25rem;
+$fs-head-300: 5rem;
+$fs-head-400: 3.5rem;
+$fs-head-500: 2rem;
+$fs-head-sub-600: 1.75rem;
+$fs-head-sub-700: 1.125rem;
+$fs-head-sub-800: 0.875rem;
+
+$fs-body-100: 1.25rem;
+$fs-body-200: 1rem;
+$fs-body-300: 0.9375rem;
+
+$ltr-spacing-100: 4.75px;
+$ltr-spacing-200: 2.35px;
+$ltr-spacing-300: 2.7px;
+
+$display--flex: flex;
+$display--grid: grid;

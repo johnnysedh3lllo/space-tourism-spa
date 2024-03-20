@@ -1,0 +1,44 @@
+.btn {
+  &--header {
+    inline-size: 9.375rem;
+    block-size: 9.375rem;
+    color: $clr-blue-dark;
+    background-color: $clr-white-100;
+    border-radius: 100%;
+    box-shadow: 0;
+    @include transition(box-shadow);    
+    &:hover {
+      box-shadow: 0px 0px 0px 2rem hsla(0, 0%, 100%, 0.104);
+      -webkit-box-shadow: 0px 0px 0px 2rem hsla(0, 0%, 100%, 0.104);
+      -moz-box-shadow: 0px 0px 0px 2rem hsla(0, 0%, 100%, 0.104);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .btn {
+    &--header {
+      inline-size: 15.125rem;
+      block-size: 15.125rem;
+      &:hover {
+        box-shadow: 0px 0px 0px 3rem hsla(0, 0%, 100%, 0.104);
+        -webkit-box-shadow: 0px 0px 0px 3rem hsla(0, 0%, 100%, 0.104);
+        -moz-box-shadow: 0px 0px 0px 3rem hsla(0, 0%, 100%, 0.104);
+      }
+    }
+  }
+}
+
+@media (min-width: 1366px) {
+  .btn {
+    &--header {
+      inline-size: 17.125rem;
+      block-size: 17.125rem;
+      &:hover {
+        box-shadow: 0px 0px 0px 4rem hsla(0, 0%, 100%, 0.104);
+        -webkit-box-shadow: 0px 0px 0px 4rem hsla(0, 0%, 100%, 0.104);
+        -moz-box-shadow: 0px 0px 0px 4rem hsla(0, 0%, 100%, 0.104);
+      }
+    }
+  }
+}

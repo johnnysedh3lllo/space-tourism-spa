@@ -8,11 +8,57 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
 
   <title>Frontend Mentor | Space tourism website</title>
+
+  <!-- GOOGLE FONTS API -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS STYLESHEETS -->
+  <link rel="stylesheet" href="src/styles/style.css">
 </head>
 
-<body>
+<body class="body">
+  <nav class="nav">
+    <a href="/" data-link>
 
+      <img class="icon icon--logo" src="src/assets/logo.svg" alt="">
+    </a>
 
+    <hr class="hr">
+
+    <div class="container nav__container translate">
+      <button class="btn btn--close"><img class="icon icon--close" src="src/assets/icon-close.svg" alt=""></button>
+
+      <ul class="nav__list">
+        <li class="nav__list__item"><span class="nav__list__item__number">00</span><a href="/"
+            class="nav__list__item__link" data-link>HOME</a>
+          <div class="after"></div>
+        </li>
+
+        <li class="nav__list__item"><span class="nav__list__item__number">01</span><a href="/destination"
+            class="nav__list__item__link" data-link>DESTINATION</a>
+          <div class="after"></div>
+        </li>
+
+        <li class="nav__list__item"><span class="nav__list__item__number">02</span><a href="/crew"
+            class="nav__list__item__link" data-link>CREW</a>
+          <div class="after"></div>
+        </li>
+
+        <li class="nav__list__item"><span class="nav__list__item__number">03</span><a href="/technology"
+            class="nav__list__item__link" data-link>TECHNOLOGY</a>
+          <div class="after"></div>
+        </li>
+      </ul>
+    </div>
+
+    <button class="btn btn--menu"><img class="icon icon--hamburger" src="src/assets/icon-hamburger.svg" alt=""></button>
+  </nav>
+
+  <div id="app"></div>
+  <script type="module" src="/src/javascript/main.js"></script>
 </body>
 
 </html>

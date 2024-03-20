@@ -47,6 +47,11 @@ a:not([class]) {
 }
 
 /* prevents outline on pseudo classes on anchor links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 a:focus,
 a:visited,
 a:active {

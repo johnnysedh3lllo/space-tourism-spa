@@ -1,0 +1,10 @@
+@mixin btn() {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  color: inherit;
+}
+
+@mixin transition($property) {
+  transition: $property 0.25s;
+}
