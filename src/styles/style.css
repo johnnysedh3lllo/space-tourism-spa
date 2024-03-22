@@ -181,6 +181,10 @@ body {
     width: 100%;
     background-color: hsla(0, 0%, 100%, 0.04);
     height: 1px;
+    position: relative;
+    inset-inline-start: 1rem;
+    z-index: 101;
+    border: 0;
   }
   .page {
     inline-size: 100%;
@@ -203,7 +207,9 @@ body {
   }
   .page:has(.crew__section) {
     padding: 0 10.1875rem 0;
-    gap: 0;
+    position: relative;
+    justify-content: space-between;
+    gap: 11rem;
   }
 }
 .body {
@@ -383,6 +389,7 @@ body {
 .icon--logo {
   inline-size: 2.5rem;
   align-self: start;
+  margin-inline-end: 3rem;
 }
 .icon--close {
   inline-size: 1.1931rem;
@@ -409,8 +416,7 @@ body {
   padding: 1.5rem;
   inline-size: 100%;
   position: fixed;
-  gap: 4rem;
-  z-index: 1000;
+  z-index: 100;
 }
 .nav__list {
   justify-self: start;
@@ -753,8 +759,8 @@ body {
   align-items: center;
   gap: 2rem;
 }
-.crew__section__image-wrapper {
-  width: 11.07rem;
+.crew__section__image {
+  inline-size: 11.07rem;
 }
 .crew__section__main {
   display: flex;
@@ -767,8 +773,8 @@ body {
   justify-content: center;
 }
 .crew__section__main__buttons__button {
-  width: 0.625rem;
-  height: 0.625rem;
+  inline-size: 0.625rem;
+  block-size: 0.625rem;
   background-color: hsla(0, 0%, 100%, 0.174);
   border-radius: 100%;
   transition: all 0.25s;
@@ -792,10 +798,12 @@ body {
     flex-direction: column-reverse;
     gap: 2.5rem;
   }
+  .crew__section__image {
+    inline-size: 100%;
+  }
   .crew__section__image-wrapper {
     position: relative;
     bottom: -1rem;
-    width: 100%;
   }
 }
 @media (min-width: 1365px) {
@@ -804,24 +812,21 @@ body {
     align-items: end;
     inline-size: 100%;
   }
-  .crew__section > * {
-    flex: 1;
-  }
   .crew__section__main {
+    flex-basis: 100%;
     gap: 7.5rem;
     align-items: start;
     text-align: start;
     padding-block-end: 5.875rem;
   }
   .crew__section__main__buttons__button {
-    width: 0.9375rem;
-    height: 0.9375rem;
+    inline-size: 0.9375rem;
+    block-size: 0.9375rem;
   }
   .crew__section__image-wrapper {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    bottom: -1rem;
+    position: absolute;
+    bottom: 0;
+    right: 5.375rem;
   }
 }
 

@@ -2,6 +2,7 @@
   &--logo {
     inline-size: 2.5rem;
     align-self: start;
+    margin-inline-end: 3rem;
   }
 
   &--close {
@@ -28,8 +29,7 @@
   padding: 1.5rem;
   inline-size: 100%;
   position: fixed;
-  gap: 4rem;
-  z-index: 1000;
+  z-index: 100;
   &__list {
     justify-self: start;
     display: $display--grid;

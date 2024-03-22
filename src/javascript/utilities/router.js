@@ -102,7 +102,6 @@ export const router = async () => {
     });
   });
 
-
   const crewSectionButtonsContainer = mainApp?.querySelector(
     ".crew__section__main__buttons"
   );
@@ -115,7 +114,28 @@ export const router = async () => {
     const clicked = event.target.closest(
       ".crew__section__main__buttons__button"
     );
-    
+    if (!clicked) return;
+
     selectActiveNav(crewSectionButtons, clicked, "active--dot");
+
+    const clickedNumber = clicked.getAttribute("data-number");
+
+    // elements to be updated
+    const crewSectionImage = document.querySelector(".crew__section__image");
+
+    const crewSectionMainContentTitle = document.querySelector(
+      ".crew__section__main__content__title"
+    );
+    const crewSectionMainContentMemberName = document.querySelector(
+      ".crew__section__main__content__member-name"
+    );
+    const crewSectionMainContentDesc = document.querySelector(
+      ".crew__section__main__content__desc"
+    );
+
+    crewSectionImage.src = `${JSONdata.crew[clickedNumber].images.webp}`;
+    crewSectionMainContentTitle.textContent = `${JSONdata.crew[clickedNumber].role}`;
+    crewSectionMainContentMemberName.textContent = `${JSONdata.crew[clickedNumber].name}`;
+    crewSectionMainContentDesc.textContent = `${JSONdata.crew[clickedNumber].bio}`;
   });
 };

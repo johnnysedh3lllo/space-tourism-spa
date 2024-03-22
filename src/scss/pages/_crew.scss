@@ -5,10 +5,7 @@
     align-items: center;
     gap: 2rem;
     &__image {
-      &-wrapper {
-        width: 11.07rem;
-        // height: 13.875rem;
-      }
+      inline-size: 11.07rem;
     }
     &__main {
       display: $display--flex;
@@ -19,8 +16,8 @@
         gap: 1rem;
         justify-content: center;
         &__button {
-          width: 0.625rem;
-          height: 0.625rem;
+          inline-size: 0.625rem;
+          block-size: 0.625rem;
           background-color: $clr-white-400;
           border-radius: 100%;
           @include transition(all);
@@ -49,10 +46,10 @@
         gap: 2.5rem;
       }
       &__image {
+        inline-size: 100%;
         &-wrapper {
           position: relative;
           bottom: -1rem;
-          width: 100%;
         }
       }
     }
@@ -66,27 +63,25 @@
       align-items: end;
       inline-size: 100%;
       //   gap: 5.0894rem;
-      > * {
-        flex: 1;
-      }
       &__main {
+        flex-basis: 100%;
         gap: 7.5rem;
         align-items: start;
         text-align: start;
         padding-block-end: 5.875rem;
         &__buttons {
           &__button {
-            width: 0.9375rem;
-            height: 0.9375rem;
+            inline-size: 0.9375rem;
+            block-size: 0.9375rem;
           }
         }
       }
       &__image {
+        // inline-size: 80%;
         &-wrapper {
-          display: $display--flex;
-          justify-content: center;
-          position: relative;
-          bottom: -1rem;
+          position: absolute;
+          bottom: 0;
+          right: 5.375rem;
         }
       }
     }

@@ -112,6 +112,10 @@ body {
     width: 100%;
     background-color: $clr-white-600;
     height: 1px;
+    position: relative;
+    inset-inline-start: 1rem;
+    z-index: 101;
+    border: 0;
   }
 
   .page {
@@ -137,6 +141,8 @@ body {
   }
   .page:has(.crew__section) {
     padding: 0 10.1875rem 0;
-    gap: 0;
+    position: relative;
+    justify-content: space-between;
+    gap: 11rem;
   }
 }
