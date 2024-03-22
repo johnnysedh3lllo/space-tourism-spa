@@ -7,6 +7,40 @@ import View404 from "../views/View404";
 import { bodyEl, selectActiveNav } from "../main";
 import JSONdata from "../../../data.json";
 
+// CREW IMAGES
+import commander from "../../assets/crew/image-douglas-hurley.webp";
+import missionSpecialist from "../../assets/crew/image-mark-shuttleworth.webp";
+import pilot from "../../assets/crew/image-victor-glover.webp";
+import flightEngineer from "../../assets/crew/image-anousheh-ansari.webp";
+
+// DESTINATION IMAGES
+import moon from "../../assets/destination/image-moon.webp";
+import mars from "../../assets/destination/image-mars.webp";
+import europa from "../../assets/destination/image-europa.webp";
+import titan from "../../assets/destination/image-titan.webp";
+
+const crewImagePaths = {
+  0: commander,
+  1: missionSpecialist,
+  2: pilot,
+  3: flightEngineer,
+};
+
+const destinationImagePaths = {
+  0: moon,
+  1: mars,
+  2: europa,
+  3: titan,
+};
+
+const changeImage = (imageObject, imageNumber, imageElement) => {
+  for (const key in imageObject) {
+    if (key === imageNumber) {
+      imageElement.src = `${imageObject[key]}`;
+    }
+  }
+};
+
 const changeBackground = (bodyElement, pageName) => {
   const bgClassName = [...bodyElement.classList].find((el) =>
     el.match(/bg-.[a-z]+/g)
@@ -71,8 +105,7 @@ export const router = async () => {
     );
     selectActiveNav(tabCompNavListItems, clickedTabCompNavListItem);
 
-    const clickedTabCompNavListItemNumber =
-      +clicked.getAttribute("data-number");
+    const clickedTabCompNavListItemNumber = clicked.getAttribute("data-number");
 
     // elements to be updated
     const destinationImage = mainApp.querySelector(
@@ -91,7 +124,12 @@ export const router = async () => {
       ".tab-comp__section__content__par.travel"
     );
 
-    destinationImage.src = `${JSONdata.destinations[clickedTabCompNavListItemNumber].images.webp}`;
+    changeImage(
+      destinationImagePaths,
+      clickedTabCompNavListItemNumber,
+      destinationImage
+    );
+
     tabCompMainHeading.textContent = `${JSONdata.destinations[clickedTabCompNavListItemNumber].name}`;
     tabCompMainPar.textContent = `${JSONdata.destinations[clickedTabCompNavListItemNumber].description}`;
     tabCompSectDistancePar.forEach((el) => {
@@ -133,7 +171,8 @@ export const router = async () => {
       ".crew__section__main__content__desc"
     );
 
-    crewSectionImage.src = `${JSONdata.crew[clickedNumber].images.webp}`;
+    changeImage(crewImagePaths, clickedNumber, crewSectionImage);
+
     crewSectionMainContentTitle.textContent = `${JSONdata.crew[clickedNumber].role}`;
     crewSectionMainContentMemberName.textContent = `${JSONdata.crew[clickedNumber].name}`;
     crewSectionMainContentDesc.textContent = `${JSONdata.crew[clickedNumber].bio}`;

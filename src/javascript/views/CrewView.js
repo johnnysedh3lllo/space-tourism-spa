@@ -1,8 +1,8 @@
 "use strict";
 import TemplateView from "./TemplateView";
 import JSONdata from "../../../data.json";
+import commander from "../../assets/crew/image-douglas-hurley.webp";
 
-console.log(JSONdata);
 export default class extends TemplateView {
   constructor() {
     super();
@@ -14,7 +14,7 @@ export default class extends TemplateView {
             <h1 class="page__heading"><span class="page__heading__number">02</span>Meet your crew</h1>
             <section class="crew__section">
               <div class="crew__section__image-wrapper">
-                <img src="${JSONdata.crew[0].images.webp}" alt="" class="crew__section__image">
+                <img src="${commander}" alt="" class="crew__section__image">
               </div>
               <section class="crew__section__main">
                 <div class="crew__section__main__buttons">

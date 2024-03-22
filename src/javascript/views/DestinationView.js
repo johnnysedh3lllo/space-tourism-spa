@@ -2,6 +2,8 @@
 import TemplateView from "./TemplateView";
 import JSONdata from "../../../data.json";
 
+import moon from "../../assets/destination/image-moon.webp";
+
 export default class extends TemplateView {
   constructor() {
     super();
@@ -13,7 +15,7 @@ export default class extends TemplateView {
             <h1 class="page__heading destination__heading"><span class="page__heading__number destination__heading__number">01</span>Pick your destination</h1>
             <section class="destination__section">
               <div class="destination__section__image-wrapper">
-                <img src="${JSONdata.destinations[0].images.webp}" alt="" class="destination__section__image">
+                <img src="${moon}" alt="" class="destination__section__image">
               </div>
               <section class="tab-comp">
                 <nav class="tab-comp__nav">
