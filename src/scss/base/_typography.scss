@@ -39,6 +39,7 @@
       font-size: $fs-body-300;
       font-weight: $fw-400;
       line-height: 1.5625rem;
+      color: $clr-blue-light;
     }
   }
 }
@@ -50,7 +51,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   .nav {
     font-size: $fs-head-sub-800;
   }

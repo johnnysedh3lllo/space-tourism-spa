@@ -1,14 +1,18 @@
 "use strict";
 import { router, navigateTo } from "./utilities/router";
 
-// const nav = document.querySelector(".nav");
-// const app = document.getElementById("app");
-// const btnMenu = document.querySelector(".btn--menu");
-// const btnClose = document.querySelector(".btn--close");
 const navContainer = document.querySelector(".nav__container");
 const navElement = document.querySelector(".nav");
-const navListItems = document.querySelectorAll(".nav__list__item");
+export const navListItems = document.querySelectorAll(".nav__list__item");
+export const bodyEl = document.querySelector(".body");
+
 let clicked;
+
+navListItems.forEach((el) => {
+  if (el.classList.contains(`${location.pathname.slice(1)}--nav`)) {
+    el.classList.add("active");
+  }
+});
 
 window.addEventListener("popstate", router);
 
@@ -16,6 +20,19 @@ const controlNav = (className) => {
   if (clicked.classList.contains(className)) {
     navContainer.classList.toggle("translate");
   }
+};
+
+export const selectActiveNav = (
+  navListItems,
+  clickedNavListItem,
+  className = "active"
+) => {
+  navListItems.forEach((item) => {
+    if (item !== clickedNavListItem) {
+      item.classList.remove(className);
+    }
+  });
+  clickedNavListItem.classList.add(className);
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -26,18 +43,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (clicked.closest("[data-link]")) {
       e.preventDefault();
 
-      navListItems.forEach((item) => {
-        if (item !== clickedNavListItem) {
-          item.classList.remove("active");
-        }
-      });
-
-      clickedNavListItem.classList.add("active");
+      selectActiveNav(navListItems, clickedNavListItem);
 
       if (!navContainer.classList.contains("translate")) {
         navContainer.classList.add("translate");
       }
-      navigateTo(clicked.href);
+
+      navigateTo(clicked);
     }
   });
   router();

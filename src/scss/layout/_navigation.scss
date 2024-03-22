@@ -29,6 +29,7 @@
   inline-size: 100%;
   position: fixed;
   gap: 4rem;
+  z-index: 1000;
   &__list {
     justify-self: start;
     display: $display--grid;

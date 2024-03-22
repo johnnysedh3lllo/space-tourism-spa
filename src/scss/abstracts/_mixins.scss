@@ -5,6 +5,14 @@
   color: inherit;
 }
 
-@mixin transition($property) {
-  transition: $property 0.25s;
+@mixin transition($property, $duration: 0.25s) {
+  transition: $property $duration;
+}
+
+@mixin backgroundChange($color, $url) {
+  background-color: $color;
+  background: $url;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
 }

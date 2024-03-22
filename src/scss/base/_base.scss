@@ -1,9 +1,4 @@
 body {
-  background-color: $clr-blue-dark;
-  background: url("../assets/home/background-home-mobile.jpg");
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
   color: $clr-white-100;
   position: relative;
 }
@@ -17,7 +12,7 @@ body {
   min-height: 100vh;
 }
 
-#app:has(.header) {
+#app:has(.header, .page) {
   display: $display--flex;
 }
 
@@ -39,14 +34,49 @@ body {
   translate: 100% 0;
 }
 
-@media (min-width: 768px) {
+.page {
+  display: $display--flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+  padding: 0 1.5rem 3.625rem;
+  min-block-size: 100%;
+  &__heading {
+    font-family: $ff-secondary;
+    font-size: $fs-body-200;
+    font-weight: $fw-400;
+    letter-spacing: $ltr-spacing-300;
+    text-transform: uppercase;
+
+    &__number {
+      padding-inline-end: 1.125rem;
+      font-weight: $fw-700;
+      color: $clr-white-300;
+    }
+  }
+  &__main {
+    &__title {
+      text-transform: uppercase;
+      color: $clr-white-200;
+      font-weight: $fw-400;
+    }
+    &__member-name {
+      text-transform: uppercase;
+      font-size: 1.5rem;
+    }
+    &__desc {
+      padding-block-start: 1rem;
+      font-size: $fs-body-300;
+      color: $clr-blue-light;
+      line-height: 25px;
+    }
+  }
+}
+
+@media (min-width: 767px) {
   body {
     position: static;
-    background-color: $clr-blue-dark;
-    background: url("../assets/home/background-home-tablet.jpg");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
   }
 
   #app {
@@ -56,12 +86,31 @@ body {
   .translate {
     translate: 0;
   }
+
+  .page {
+    padding: 0 2.4063rem 3.875rem;
+    gap: 3.75rem;
+    &__heading {
+      text-align: left;
+    }
+    &__main {
+      &__title {
+        font-size: 1.5rem;
+      }
+      &__member-name {
+        font-size: 2.5rem;
+      }
+      &__desc {
+        font-size: $fs-body-200;
+      }
+    }
+  }
+  .page:has(.crew__section) {
+    padding: 0 2.4063rem 0;
+  }
 }
 
-// @media (min-width: 1440px) {
-// }
-
-@media (min-width: 1366px) {
+@media (min-width: 1365px) {
   .hr {
     display: block;
     width: 100%;
@@ -69,11 +118,29 @@ body {
     height: 1px;
   }
 
-  body {
-    background-color: $clr-blue-dark;
-    background: url("../assets/home/background-home-desktop.jpg");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
+  .page {
+    inline-size: 100%;
+    padding: 4.75rem 10.1875rem 7.375rem;
+    &__heading {
+      font-size: $fs-head-sub-600;
+      letter-spacing: $ltr-spacing-100;
+    }
+    &__main {
+      &__title {
+        font-size: $fs-head-500;
+      }
+      &__member-name {
+        font-size: $fs-head-400;
+      }
+      &__desc {
+        font-size: $fs-head-sub-700;
+        padding-block-start: 1.6875rem;
+        inline-size: 44ch;
+      }
+    }
+  }
+  .page:has(.crew__section) {
+    padding: 0 10.1875rem 0;
+    gap: 0;
   }
 }

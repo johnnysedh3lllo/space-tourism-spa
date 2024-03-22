@@ -1,0 +1,94 @@
+.crew {
+  &__section {
+    display: $display--flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    &__image {
+      &-wrapper {
+        width: 11.07rem;
+        // height: 13.875rem;
+      }
+    }
+    &__main {
+      display: $display--flex;
+      flex-direction: column;
+      gap: 2rem;
+      &__buttons {
+        display: $display--flex;
+        gap: 1rem;
+        justify-content: center;
+        &__button {
+          width: 0.625rem;
+          height: 0.625rem;
+          background-color: $clr-white-400;
+          border-radius: 100%;
+          @include transition(all);
+          &:hover {
+            background-color: $clr-white-200;
+          }
+        }
+      }
+    }
+  }
+}
+
+.active--dot {
+  background-color: $clr-white-100;
+}
+
+@media (min-width: 767px) {
+  .crew {
+    &__section {
+      flex-direction: column-reverse;
+      inline-size: min(100%, 28.625rem);
+      margin-inline: auto;
+      gap: 2.5rem;
+      &__main {
+        flex-direction: column-reverse;
+        gap: 2.5rem;
+      }
+      &__image {
+        &-wrapper {
+          position: relative;
+          bottom: -1rem;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1365px) {
+  .crew {
+    &__section {
+      flex-direction: row-reverse;
+      align-items: end;
+      inline-size: 100%;
+      //   gap: 5.0894rem;
+      > * {
+        flex: 1;
+      }
+      &__main {
+        gap: 7.5rem;
+        align-items: start;
+        text-align: start;
+        padding-block-end: 5.875rem;
+        &__buttons {
+          &__button {
+            width: 0.9375rem;
+            height: 0.9375rem;
+          }
+        }
+      }
+      &__image {
+        &-wrapper {
+          display: $display--flex;
+          justify-content: center;
+          position: relative;
+          bottom: -1rem;
+        }
+      }
+    }
+  }
+}

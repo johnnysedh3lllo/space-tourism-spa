@@ -1,0 +1,182 @@
+.destination {
+  &__section {
+    display: $display--flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 1.625rem;
+    &__image-wrapper {
+      width: 10.625rem;
+    }
+  }
+}
+
+.tab-comp {
+  &__nav {
+    &__list {
+      display: $display--flex;
+      justify-content: center;
+      padding-block-end: 0.5rem;
+      gap: 1.625rem;
+      &__item {
+        padding-block-end: 0.5rem;
+
+        position: relative;
+        .after {
+          position: absolute;
+          block-size: 3px;
+          left: 50%;
+          right: 50%;
+          // top: 2px;
+          top: initial;
+          bottom: 0;
+          inline-size: 0;
+          @include transition(all);
+        }
+
+        &.active .after {
+          background-color: $clr-white-100;
+          top: initial;
+          left: 0;
+          right: 0;
+          inline-size: 100%;
+        }
+
+        &:has(&__link:hover) {
+          & .after {
+            background-color: $clr-white-200;
+            top: initial;
+            left: 0;
+            right: 0;
+            inline-size: 100%;
+          }
+        }
+        &__link {
+          text-transform: uppercase;
+          font-family: $ff-secondary;
+          letter-spacing: $ltr-spacing-200;
+          color: $clr-blue-light;
+        }
+      }
+    }
+  }
+
+  &__main {
+    padding-block: 1.25rem 2rem;
+    &__heading {
+      text-transform: uppercase;
+      font-size: $fs-head-400;
+    }
+    &__par {
+      font-family: $ff-secondary;
+      font-size: $fs-body-300;
+      line-height: 1.5625rem;
+      color: $clr-blue-light;
+    }
+  }
+
+  &__section {
+    padding-block-start: 2rem;
+    display: $display--flex;
+    flex-direction: column;
+    gap: 2rem;
+    &__content {
+      display: $display--grid;
+      gap: 0.75rem;
+      &__heading {
+        font-family: $ff-secondary;
+        font-weight: $fw-400;
+        letter-spacing: $ltr-spacing-200;
+        text-transform: uppercase;
+      }
+      &__par {
+        font-size: $fs-head-sub-600;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+@media (min-width: 767px) {
+  .destination {
+    &__section {
+      gap: 3.3125rem;
+      &__image-wrapper {
+        width: 18.75rem;
+      }
+    }
+  }
+
+  .tab-comp {
+    inline-size: min(100%, 35.8125rem);
+    &__nav {
+      &__list {
+        gap: 2.25rem;
+        &__item {
+          padding-block-end: 0.75rem;
+        }
+      }
+    }
+
+    &__main {
+      &__heading {
+        font-size: $fs-head-300;
+      }
+      &__par {
+        font-family: $ff-secondary;
+        font-size: $fs-body-200;
+        color: $clr-blue-light;
+      }
+    }
+
+    &__section {
+      justify-content: space-around;
+      flex-direction: row;
+    }
+  }
+}
+
+@media (min-width: 1365px) {
+
+
+  .destination {
+    &__section {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      &__image-wrapper {
+        width: 27.8125rem;
+      }
+    }
+  }
+
+  .tab-comp {
+    inline-size: min(100%, 27.8125rem);
+    text-align: start;
+
+    &__nav {
+      &__list {
+        justify-content: start;
+        &__item {
+          padding-block-end: 0.75rem;
+        }
+      }
+    }
+
+    &__main {
+      padding-block: 2.3125rem 3.375rem;
+      &__heading {
+        font-size: $fs-head-200;
+      }
+      &__par {
+        font-size: $fs-head-sub-700;
+        line-height: 2rem;
+      }
+    }
+
+    &__section {
+      padding-block-start: 1.75rem;
+      justify-content: start;
+    }
+  }
+}

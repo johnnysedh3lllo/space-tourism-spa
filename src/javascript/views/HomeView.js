@@ -1,9 +1,5 @@
 "use strict";
 import TemplateView from "./TemplateView";
-import JSONData from "../../../data.json";
-
-console.log(JSONData);
-
 export default class extends TemplateView {
   constructor() {
     super();
