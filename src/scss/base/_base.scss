@@ -1,6 +1,7 @@
 body {
   color: $clr-white-100;
   position: relative;
+  background-color: $clr-blue-dark;
 }
 
 #app {
@@ -70,6 +71,10 @@ body {
   }
 }
 
+.page:has(.tech__section) {
+  padding: 0 0 3.5rem;
+}
+
 @media (min-width: 767px) {
   body {
     position: static;
@@ -103,6 +108,10 @@ body {
   }
   .page:has(.crew__section) {
     padding: 0 2.4063rem 0;
+  }
+
+  .page:has(.tech__section) {
+    width: 100%;
   }
 }
 
@@ -144,5 +153,8 @@ body {
     position: relative;
     justify-content: space-between;
     gap: 11rem;
+  }
+  .page:has(.tech__section) {
+    padding-inline-start: 10.3125rem;
   }
 }

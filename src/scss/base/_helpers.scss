@@ -1,6 +1,5 @@
 .bg-home {
   @include backgroundChange(
-    $clr-blue-dark,
     url("../assets/home/background-home-mobile.jpg")
   );
   @include transition(all, 0.5s);
@@ -8,7 +7,6 @@
 
 .bg-destination {
   @include backgroundChange(
-    $clr-blue-dark,
     url("../assets/destination/background-destination-mobile.jpg")
   );
   @include transition(all, 0.5s);
@@ -16,7 +14,6 @@
 
 .bg-crew {
   @include backgroundChange(
-    $clr-blue-dark,
     url("../assets/crew/background-crew-mobile.jpg")
   );
   @include transition(all, 0.5s);
@@ -24,7 +21,6 @@
 
 .bg-technology {
   @include backgroundChange(
-    $clr-blue-dark,
     url("../assets/technology/background-technology-mobile.jpg")
   );
   @include transition(all, 0.5s);
@@ -33,28 +29,28 @@
 @media (min-width: 767px) {
   .bg-home {
     @include backgroundChange(
-      $clr-blue-dark,
+
       url("../assets/home/background-home-tablet.jpg")
     );
   }
 
   .bg-destination {
     @include backgroundChange(
-      $clr-blue-dark,
+
       url("../assets/destination/background-destination-tablet.jpg")
     );
   }
 
   .bg-crew {
     @include backgroundChange(
-      $clr-blue-dark,
+
       url("../assets/crew/background-crew-tablet.jpg")
     );
   }
 
   .bg-technology {
     @include backgroundChange(
-      $clr-blue-dark,
+
       url("../assets/technology/background-technology-tablet.jpg")
     );
   }
@@ -63,28 +59,28 @@
 @media (min-width: 1365px) {
   .bg-home {
     @include backgroundChange(
-      $clr-blue-dark,
+
       url("../assets/home/background-home-desktop.jpg")
     );
   }
 
   .bg-destination {
     @include backgroundChange(
-      $clr-blue-dark,
+
       url("../assets/destination/background-destination-desktop.jpg")
     );
   }
 
   .bg-crew {
     @include backgroundChange(
-      $clr-blue-dark,
+
       url("../assets/crew/background-crew-desktop.jpg")
     );
   }
 
   .bg-technology {
     @include backgroundChange(
-      $clr-blue-dark,
+
       url("../assets/technology/background-technology-desktop.jpg")
     );
   }

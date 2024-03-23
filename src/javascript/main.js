@@ -37,6 +37,7 @@ export const selectActiveNav = (
 
 document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("click", (e) => {
+    e.preventDefault();
     clicked = e.target;
     const clickedNavListItem = clicked.closest(".nav__list__item");
 

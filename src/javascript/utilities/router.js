@@ -19,6 +19,17 @@ import mars from "../../assets/destination/image-mars.webp";
 import europa from "../../assets/destination/image-europa.webp";
 import titan from "../../assets/destination/image-titan.webp";
 
+// TECHNOLOGY IMAGES
+// desktop
+import launchVehicleLandscape from "../../assets/technology/image-launch-vehicle-landscape.jpg";
+import spaceCapsuleLandscape from "../../assets/technology/image-space-capsule-landscape.jpg";
+import spacePortLandscape from "../../assets/technology/image-spaceport-landscape.jpg";
+
+// mobile
+import launchVehiclePortrait from "../../assets/technology/image-launch-vehicle-portrait.jpg";
+import spaceCapsulePortrait from "../../assets/technology/image-space-capsule-portrait.jpg";
+import spacePortPortrait from "../../assets/technology/image-spaceport-portrait.jpg";
+
 const crewImagePaths = {
   0: commander,
   1: missionSpecialist,
@@ -31,6 +42,18 @@ const destinationImagePaths = {
   1: mars,
   2: europa,
   3: titan,
+};
+
+const techMobileImagePaths = {
+  0: launchVehicleLandscape,
+  1: spacePortLandscape,
+  2: spaceCapsuleLandscape,
+};
+
+const techDesktopImagePaths = {
+  0: launchVehiclePortrait,
+  1: spacePortPortrait,
+  2: spaceCapsulePortrait,
 };
 
 const changeImage = (imageObject, imageNumber, imageElement) => {
@@ -49,6 +72,8 @@ const changeBackground = (bodyElement, pageName) => {
   bodyElement.classList.remove(`${bgClassName}`);
   bodyElement.classList.add(`bg-${pageName}`);
 };
+
+let mainApp;
 
 export const navigateTo = (clickedElement) => {
   history.pushState(null, null, clickedElement.href);
@@ -89,23 +114,28 @@ export const router = async () => {
 
   // renders the content for each page
   //by calling the "getHtml" function on each view class
-  const mainApp = document.querySelector("#app");
+  mainApp = document.querySelector("#app");
   mainApp.innerHTML = await view.getHtml();
+
+  // TAB COMP NAV
 
   const tabCompNavList = mainApp.querySelector(".tab-comp__nav__list");
   tabCompNavList?.addEventListener("click", (event) => {
     event.preventDefault();
-    const clicked = event.target;
-    if (!clicked) return;
+    const clickedTabCompNavListItem = event.target.closest(
+      ".tab-comp__nav__list__item"
+    );
+    if (!clickedTabCompNavListItem) return;
+
     const tabCompNavListItems = document.querySelectorAll(
       ".tab-comp__nav__list__item"
     );
-    const clickedTabCompNavListItem = clicked.closest(
-      ".tab-comp__nav__list__item"
-    );
+
     selectActiveNav(tabCompNavListItems, clickedTabCompNavListItem);
 
-    const clickedTabCompNavListItemNumber = clicked.getAttribute("data-number");
+    const clickedTabCompNavListItemNumber = clickedTabCompNavListItem
+      .querySelector(".tab-comp__nav__list__item__link")
+      .getAttribute("data-number");
 
     // elements to be updated
     const destinationImage = mainApp.querySelector(
@@ -139,6 +169,8 @@ export const router = async () => {
       el.textContent = `${JSONdata.destinations[clickedTabCompNavListItemNumber].travel}`;
     });
   });
+
+  // CREw
 
   const crewSectionButtonsContainer = mainApp?.querySelector(
     ".crew__section__main__buttons"
@@ -177,4 +209,47 @@ export const router = async () => {
     crewSectionMainContentMemberName.textContent = `${JSONdata.crew[clickedNumber].name}`;
     crewSectionMainContentDesc.textContent = `${JSONdata.crew[clickedNumber].bio}`;
   });
+
+  // CIRCLE
+  const techSectionButtonsContainer = mainApp?.querySelector(
+    ".tech__section__main__buttons"
+  );
+
+  const techSectionButtons = mainApp?.querySelectorAll(
+    ".tech__section__main__buttons__button"
+  );
+
+  techSectionButtonsContainer?.addEventListener("click", (event) => {
+    const clicked = event.target.closest(
+      ".tech__section__main__buttons__button"
+    );
+    if (!clicked) return;
+
+    selectActiveNav(techSectionButtons, clicked, "active--circle");
+
+    const clickedNumber = clicked.getAttribute("data-number");
+
+    // elements to be updated
+    const techSectionDesktopImage = document.querySelector(
+      ".tech__section__image.desktop"
+    );
+    const techSectionMobileImage = document.querySelector(
+      ".tech__section__image.mobile"
+    );
+
+    const techSectionMainContentMemberName = document.querySelector(
+      ".tech__section__main__content__member-name"
+    );
+    const techSectionMainContentDesc = document.querySelector(
+      ".tech__section__main__content__desc"
+    );
+
+    changeImage(techDesktopImagePaths, clickedNumber, techSectionDesktopImage);
+    changeImage(techMobileImagePaths, clickedNumber, techSectionMobileImage);
+
+    techSectionMainContentMemberName.textContent = `${JSONdata.technology[clickedNumber].name}`;
+    techSectionMainContentDesc.textContent = `${JSONdata.technology[clickedNumber].description}`;
+  });
 };
+
+// export { mainApp };

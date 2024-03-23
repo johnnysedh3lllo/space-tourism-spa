@@ -9,8 +9,7 @@
   transition: $property $duration;
 }
 
-@mixin backgroundChange($color, $url) {
-  background-color: $color;
+@mixin backgroundChange($url) {
   background: $url;
   background-repeat: no-repeat;
   background-position: top;

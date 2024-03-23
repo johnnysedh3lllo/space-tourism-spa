@@ -81,6 +81,7 @@ a {
 body {
   color: hsl(0, 0%, 100%);
   position: relative;
+  background-color: hsl(230, 35%, 7%);
 }
 
 #app {
@@ -145,6 +146,10 @@ body {
   line-height: 25px;
 }
 
+.page:has(.tech__section) {
+  padding: 0 0 3.5rem;
+}
+
 @media (min-width: 767px) {
   body {
     position: static;
@@ -173,6 +178,9 @@ body {
   }
   .page:has(.crew__section) {
     padding: 0 2.4063rem 0;
+  }
+  .page:has(.tech__section) {
+    width: 100%;
   }
 }
 @media (min-width: 1365px) {
@@ -210,6 +218,9 @@ body {
     position: relative;
     justify-content: space-between;
     gap: 11rem;
+  }
+  .page:has(.tech__section) {
+    padding-inline-start: 10.3125rem;
   }
 }
 .body {
@@ -291,7 +302,6 @@ body {
   }
 }
 .bg-home {
-  background-color: hsl(230, 35%, 7%);
   background: url("../assets/home/background-home-mobile.jpg");
   background-repeat: no-repeat;
   background-position: top;
@@ -300,7 +310,6 @@ body {
 }
 
 .bg-destination {
-  background-color: hsl(230, 35%, 7%);
   background: url("../assets/destination/background-destination-mobile.jpg");
   background-repeat: no-repeat;
   background-position: top;
@@ -309,7 +318,6 @@ body {
 }
 
 .bg-crew {
-  background-color: hsl(230, 35%, 7%);
   background: url("../assets/crew/background-crew-mobile.jpg");
   background-repeat: no-repeat;
   background-position: top;
@@ -318,7 +326,6 @@ body {
 }
 
 .bg-technology {
-  background-color: hsl(230, 35%, 7%);
   background: url("../assets/technology/background-technology-mobile.jpg");
   background-repeat: no-repeat;
   background-position: top;
@@ -328,28 +335,24 @@ body {
 
 @media (min-width: 767px) {
   .bg-home {
-    background-color: hsl(230, 35%, 7%);
     background: url("../assets/home/background-home-tablet.jpg");
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
   }
   .bg-destination {
-    background-color: hsl(230, 35%, 7%);
     background: url("../assets/destination/background-destination-tablet.jpg");
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
   }
   .bg-crew {
-    background-color: hsl(230, 35%, 7%);
     background: url("../assets/crew/background-crew-tablet.jpg");
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
   }
   .bg-technology {
-    background-color: hsl(230, 35%, 7%);
     background: url("../assets/technology/background-technology-tablet.jpg");
     background-repeat: no-repeat;
     background-position: top;
@@ -358,28 +361,24 @@ body {
 }
 @media (min-width: 1365px) {
   .bg-home {
-    background-color: hsl(230, 35%, 7%);
     background: url("../assets/home/background-home-desktop.jpg");
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
   }
   .bg-destination {
-    background-color: hsl(230, 35%, 7%);
     background: url("../assets/destination/background-destination-desktop.jpg");
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
   }
   .bg-crew {
-    background-color: hsl(230, 35%, 7%);
     background: url("../assets/crew/background-crew-desktop.jpg");
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
   }
   .bg-technology {
-    background-color: hsl(230, 35%, 7%);
     background: url("../assets/technology/background-technology-desktop.jpg");
     background-repeat: no-repeat;
     background-position: top;
@@ -557,6 +556,7 @@ body {
 }
 .nav__list__item .after {
   position: absolute;
+  right: 0;
   inline-size: 0;
   block-size: 100%;
   top: 50%;
@@ -827,6 +827,102 @@ body {
     position: absolute;
     bottom: 0;
     right: 5.375rem;
+  }
+}
+.tech__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.125rem;
+}
+.tech__section__image.desktop {
+  display: none;
+}
+.tech__section__main .page__main {
+  padding-inline: 1.5rem;
+}
+.tech__section__main .page__main__title {
+  color: hsl(231, 77%, 90%);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 0.875rem;
+}
+.tech__section__main .page__main__desc {
+  inline-size: min(100%, 47ch);
+  margin-inline: auto;
+}
+.tech__section__main__buttons {
+  padding-block-end: 1.625rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.tech__section__main__buttons__button {
+  letter-spacing: 1px;
+  inline-size: 2.5rem;
+  block-size: 2.5rem;
+  border: 1px solid hsla(0, 0%, 100%, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  transition: all 0.25s;
+}
+.tech__section__main__buttons__button:hover {
+  border-color: hsl(0, 0%, 100%);
+}
+
+.active--circle {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(230, 35%, 7%);
+}
+
+@media (min-width: 767px) {
+  .tech__heading {
+    padding-inline-start: 2.4063rem;
+  }
+  .tech__section__main .page__main__title {
+    font-size: 1rem;
+  }
+  .tech__section__main .page__main__desc {
+    line-height: 28px;
+  }
+}
+@media (min-width: 1365px) {
+  .tech__heading {
+    padding-inline-start: 0;
+  }
+  .tech__section {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .tech__section__image.mobile {
+    display: none;
+  }
+  .tech__section__image.desktop {
+    display: block;
+  }
+  .tech__section__main {
+    display: flex;
+    gap: 5rem;
+  }
+  .tech__section__main .page__main {
+    text-align: start;
+    padding: 0;
+  }
+  .tech__section__main .page__main__desc {
+    padding-block-start: 1rem;
+    inline-size: 45ch;
+    margin-inline: 0;
+  }
+  .tech__section__main__buttons {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+  }
+  .tech__section__main__buttons__button {
+    inline-size: 5rem;
+    block-size: 5rem;
+    font-size: 2rem;
   }
 }
 

@@ -1,0 +1,123 @@
+.tech {
+  &__section {
+    display: $display--flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.125rem;
+    &__image {
+      &.mobile {
+      }
+      &.desktop {
+        display: none;
+      }
+      &-wrapper {
+      }
+    }
+    &__main {
+      & .page__main {
+        padding-inline: 1.5rem;
+        &__title {
+          color: $clr-blue-light;
+          font-family: $ff-secondary;
+          font-size: $fs-head-sub-800;
+        }
+        &__desc {
+          inline-size: min(100%, 47ch);
+          margin-inline: auto;
+        }
+      }
+      &__buttons {
+        padding-block-end: 1.625rem;
+        display: $display--flex;
+        justify-content: center;
+        gap: 1rem;
+        &__button {
+          letter-spacing: 1px;
+          inline-size: 2.5rem;
+          block-size: 2.5rem;
+          border: 1px solid $clr-white-300;
+          display: $display--flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 100%;
+          @include transition(all);
+          &:hover {
+            border-color: $clr-white-100;
+          }
+        }
+      }
+    }
+  }
+}
+
+.active--circle {
+  background-color: $clr-white-100;
+  color: $clr-blue-dark;
+}
+
+@media (min-width: 767px) {
+  .tech {
+    &__heading {
+      padding-inline-start: 2.4063rem;
+    }
+    &__section {
+      &__main {
+        & .page__main {
+          &__title {
+            font-size: $fs-body-200;
+          }
+          &__desc {
+            line-height: 28px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1365px) {
+  .tech {
+    &__heading {
+      padding-inline-start: 0;
+    }
+    &__section {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      &__image {
+        &.mobile {
+          display: none;
+        }
+        &.desktop {
+          display: block;
+        }
+        &-wrapper {
+        }
+      }
+      &__main {
+        display: $display--flex;
+        gap: 5rem;
+        & .page__main {
+          text-align: start;
+          padding: 0;
+          &__title {
+          }
+          &__desc {
+            padding-block-start: 1rem;
+            inline-size: 45ch;
+            margin-inline: 0;
+          }
+        }
+        &__buttons {
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 0;
+          &__button {
+            inline-size: 5rem;
+            block-size: 5rem;
+            font-size: $fs-head-500;
+          }
+        }
+      }
+    }
+  }
+}
