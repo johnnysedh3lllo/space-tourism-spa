@@ -83,12 +83,12 @@ export const navigateTo = (clickedElement) => {
 
 export const router = async () => {
   const pageRoutes = [
-    { path: "/", view: HomeView, pageName: "home" },
-    { path: "/home", view: HomeView, pageName: "home" },
-    { path: "/crew", view: CrewView, pageName: "crew" },
-    { path: "/technology", view: TechnologyView, pageName: "technology" },
-    { path: "/destination", view: DestinationView, pageName: "destination" },
-    { path: "/404", view: View404, pageName: "404" },
+    { path: "./", view: HomeView, pageName: "home" },
+    { path: "./home", view: HomeView, pageName: "home" },
+    { path: "./crew", view: CrewView, pageName: "crew" },
+    { path: "./technology", view: TechnologyView, pageName: "technology" },
+    { path: "./destination", view: DestinationView, pageName: "destination" },
+    { path: "./404", view: View404, pageName: "404" },
   ];
 
   const potentialMatches = pageRoutes.map((route) => {
