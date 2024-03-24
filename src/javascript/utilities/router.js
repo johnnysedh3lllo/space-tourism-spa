@@ -77,9 +77,11 @@ let mainApp;
 
 export const navigateTo = (clickedElement) => {
   history.pushState(null, null, clickedElement.href);
-
+  
   router();
 };
+
+console.log(location.pathname);
 
 export const router = async () => {
   const pageRoutes = [
@@ -96,7 +98,6 @@ export const router = async () => {
       route: route,
       isMatch: location.pathname === route.path,
     };
-    console.log(location.pathname);
     console.log(route.path);
   });
 
