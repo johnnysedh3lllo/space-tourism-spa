@@ -1,8 +1,0 @@
-./destination/image-moon.png
-./destination/image-titan.png
-./destination/image-europa.png
-./destination/image-mars.png
-./crew/image-anousheh-ansari.png
-./crew/image-douglas-hurley.png
-./crew/image-mark-shuttleworth.png
-./crew/image-victor-glover.png

@@ -1,8 +1,8 @@
 "use strict";
 import TemplateView from "./TemplateView";
 import JSONData from "../../../data.json";
-import launchVehicleLandscape from "../../assets/technology/image-launch-vehicle-landscape.jpg";
-import launchVehiclePortrait from "../../assets/technology/image-launch-vehicle-portrait.jpg";
+import launchVehicleLandscape from "../../assets/technology/image-launch-vehicle-landscape.webp";
+import launchVehiclePortrait from "../../assets/technology/image-launch-vehicle-portrait.webp";
 
 export default class extends TemplateView {
   constructor() {

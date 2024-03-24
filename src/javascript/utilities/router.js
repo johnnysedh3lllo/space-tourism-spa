@@ -21,14 +21,14 @@ import titan from "../../assets/destination/image-titan.webp";
 
 // TECHNOLOGY IMAGES
 // desktop
-import launchVehicleLandscape from "../../assets/technology/image-launch-vehicle-landscape.jpg";
-import spaceCapsuleLandscape from "../../assets/technology/image-space-capsule-landscape.jpg";
-import spacePortLandscape from "../../assets/technology/image-spaceport-landscape.jpg";
+import launchVehicleLandscape from "../../assets/technology/image-launch-vehicle-landscape.webp";
+import spaceCapsuleLandscape from "../../assets/technology/image-space-capsule-landscape.webp";
+import spacePortLandscape from "../../assets/technology/image-spaceport-landscape.webp";
 
 // mobile
-import launchVehiclePortrait from "../../assets/technology/image-launch-vehicle-portrait.jpg";
-import spaceCapsulePortrait from "../../assets/technology/image-space-capsule-portrait.jpg";
-import spacePortPortrait from "../../assets/technology/image-spaceport-portrait.jpg";
+import launchVehiclePortrait from "../../assets/technology/image-launch-vehicle-portrait.webp";
+import spaceCapsulePortrait from "../../assets/technology/image-space-capsule-portrait.webp";
+import spacePortPortrait from "../../assets/technology/image-spaceport-portrait.webp";
 
 const crewImagePaths = {
   0: commander,

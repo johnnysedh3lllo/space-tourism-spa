@@ -1,27 +1,27 @@
 .bg-home {
   @include backgroundChange(
-    url("../assets/home/background-home-mobile.jpg")
+    url("../assets/home/background-home-mobile.webp")
   );
   @include transition(all, 0.5s);
 }
 
 .bg-destination {
   @include backgroundChange(
-    url("../assets/destination/background-destination-mobile.jpg")
+    url("../assets/destination/background-destination-mobile.webp")
   );
   @include transition(all, 0.5s);
 }
 
 .bg-crew {
   @include backgroundChange(
-    url("../assets/crew/background-crew-mobile.jpg")
+    url("../assets/crew/background-crew-mobile.webp")
   );
   @include transition(all, 0.5s);
 }
 
 .bg-technology {
   @include backgroundChange(
-    url("../assets/technology/background-technology-mobile.jpg")
+    url("../assets/technology/background-technology-mobile.webp")
   );
   @include transition(all, 0.5s);
 }
@@ -30,28 +30,28 @@
   .bg-home {
     @include backgroundChange(
 
-      url("../assets/home/background-home-tablet.jpg")
+      url("../assets/home/background-home-tablet.webp")
     );
   }
 
   .bg-destination {
     @include backgroundChange(
 
-      url("../assets/destination/background-destination-tablet.jpg")
+      url("../assets/destination/background-destination-tablet.webp")
     );
   }
 
   .bg-crew {
     @include backgroundChange(
 
-      url("../assets/crew/background-crew-tablet.jpg")
+      url("../assets/crew/background-crew-tablet.webp")
     );
   }
 
   .bg-technology {
     @include backgroundChange(
 
-      url("../assets/technology/background-technology-tablet.jpg")
+      url("../assets/technology/background-technology-tablet.webp")
     );
   }
 }
@@ -60,28 +60,28 @@
   .bg-home {
     @include backgroundChange(
 
-      url("../assets/home/background-home-desktop.jpg")
+      url("../assets/home/background-home-desktop.webp")
     );
   }
 
   .bg-destination {
     @include backgroundChange(
 
-      url("../assets/destination/background-destination-desktop.jpg")
+      url("../assets/destination/background-destination-desktop.webp")
     );
   }
 
   .bg-crew {
     @include backgroundChange(
 
-      url("../assets/crew/background-crew-desktop.jpg")
+      url("../assets/crew/background-crew-desktop.webp")
     );
   }
 
   .bg-technology {
     @include backgroundChange(
 
-      url("../assets/technology/background-technology-desktop.jpg")
+      url("../assets/technology/background-technology-desktop.webp")
     );
   }
 }
