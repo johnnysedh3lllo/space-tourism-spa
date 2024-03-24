@@ -5,12 +5,9 @@
     align-items: center;
     gap: 2.125rem;
     &__image {
-      &.mobile {
-      }
+
       &.desktop {
         display: none;
-      }
-      &-wrapper {
       }
     }
     &__main {
