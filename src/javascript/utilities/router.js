@@ -96,6 +96,8 @@ export const router = async () => {
       route: route,
       isMatch: location.pathname === route.path,
     };
+    console.log(location.pathname);
+    console.log(route.path);
   });
 
   let match = potentialMatches.find((potentialMatch) => potentialMatch.isMatch);
