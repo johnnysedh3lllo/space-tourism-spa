@@ -85,12 +85,12 @@ console.log(location.pathname);
 
 export const router = async () => {
   const pageRoutes = [
-    { path: "./", view: HomeView, pageName: "home" },
-    { path: "./home", view: HomeView, pageName: "home" },
-    { path: "./crew", view: CrewView, pageName: "crew" },
-    { path: "./technology", view: TechnologyView, pageName: "technology" },
-    { path: "./destination", view: DestinationView, pageName: "destination" },
-    { path: "./404", view: View404, pageName: "404" },
+    { path: "/space-tourism-spa/", view: HomeView, pageName: "home" },
+    { path: "/space-tourism-spa/home", view: HomeView, pageName: "home" },
+    { path: "/space-tourism-spa/crew", view: CrewView, pageName: "crew" },
+    { path: "/space-tourism-spa/technology", view: TechnologyView, pageName: "technology" },
+    { path: "/space-tourism-spa/destination", view: DestinationView, pageName: "destination" },
+    { path: "/space-tourism-spa/404", view: View404, pageName: "404" },
   ];
 
   const potentialMatches = pageRoutes.map((route) => {
