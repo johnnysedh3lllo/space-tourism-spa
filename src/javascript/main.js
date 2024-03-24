@@ -14,8 +14,6 @@ navListItems.forEach((el) => {
   }
 });
 
-window.addEventListener("popstate", router);
-
 const controlNav = (className) => {
   if (clicked.classList.contains(className)) {
     navContainer.classList.toggle("translate");
@@ -34,6 +32,8 @@ export const selectActiveNav = (
   });
   clickedNavListItem.classList.add(className);
 };
+
+window.addEventListener("popstate", router);
 
 document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("click", (e) => {

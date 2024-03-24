@@ -76,20 +76,27 @@ const changeBackground = (bodyElement, pageName) => {
 let mainApp;
 
 export const navigateTo = (clickedElement) => {
+  console.log(clickedElement);
+  console.log(clickedElement.href);
   history.pushState(null, null, clickedElement.href);
-  
   router();
 };
-
-console.log(location.pathname);
 
 export const router = async () => {
   const pageRoutes = [
     { path: "/space-tourism-spa/", view: HomeView, pageName: "home" },
     { path: "/space-tourism-spa/home", view: HomeView, pageName: "home" },
     { path: "/space-tourism-spa/crew", view: CrewView, pageName: "crew" },
-    { path: "/space-tourism-spa/technology", view: TechnologyView, pageName: "technology" },
-    { path: "/space-tourism-spa/destination", view: DestinationView, pageName: "destination" },
+    {
+      path: "/space-tourism-spa/technology",
+      view: TechnologyView,
+      pageName: "technology",
+    },
+    {
+      path: "/space-tourism-spa/destination",
+      view: DestinationView,
+      pageName: "destination",
+    },
     { path: "/space-tourism-spa/404", view: View404, pageName: "404" },
   ];
 
@@ -98,7 +105,6 @@ export const router = async () => {
       route: route,
       isMatch: location.pathname === route.path,
     };
-    console.log(route.path);
   });
 
   let match = potentialMatches.find((potentialMatch) => potentialMatch.isMatch);
