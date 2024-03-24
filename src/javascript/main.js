@@ -33,7 +33,14 @@ export const selectActiveNav = (
   clickedNavListItem.classList.add(className);
 };
 
-window.addEventListener("popstate", router);
+window.addEventListener("popstate", () => {
+  const curURL = new URL(window.location.href);
+  const route = curURL.pathname;
+
+  console.log(curURL);
+  console.log(route);
+  router();
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("click", (e) => {
