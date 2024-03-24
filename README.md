@@ -70,5 +70,4 @@ to discuss what you would like to change.
 
 ## Connect 
 Twitter (don't like the name "X"): [johnnysedh3lllo](https://twitter.com/johnnysedh3lllo)
-
 Reddit : [johnnysedh3lllo](https://www.reddit.com/user/johnnysedh3lllo/)
