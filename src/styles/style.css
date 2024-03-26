@@ -476,6 +476,7 @@ body {
 }
 @media (min-width: 1366px) {
   .nav {
+    margin-block-start: 2.5rem;
     padding: 0 0 0 3.4375rem;
   }
   .nav__list {
