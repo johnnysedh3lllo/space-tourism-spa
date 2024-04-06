@@ -64,7 +64,7 @@ you can either copy the ``http://localhost:5173/`` and paste it in your browser 
 
 ## Contributing
 
-Pull requests are welcome. Suggestions too, especially on the topic of project architecture.
+Pull requests are welcome. Suggestions too, especially on the topic of project architecture and planning.
 For major changes, please open an issue first
 to discuss what you'd like to change.
 
