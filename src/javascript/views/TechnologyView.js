@@ -7,7 +7,7 @@ import launchVehiclePortrait from "../../assets/technology/image-launch-vehicle-
 export default class extends TemplateView {
   constructor() {
     super();
-    this.setTitle("SPACE LAUNCH 101");
+    this.setTitle("Space Launch 101");
   }
   async getHtml() {
     return `

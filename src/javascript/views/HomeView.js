@@ -3,7 +3,7 @@ import TemplateView from "./TemplateView";
 export default class extends TemplateView {
   constructor() {
     super();
-    this.setTitle("HOME");
+    this.setTitle("Space Tourism");
   }
   async getHtml() {
     return `

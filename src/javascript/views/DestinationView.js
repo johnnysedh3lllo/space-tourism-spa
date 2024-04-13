@@ -7,7 +7,7 @@ import moon from "../../assets/destination/image-moon.webp";
 export default class extends TemplateView {
   constructor() {
     super();
-    this.setTitle("PICK YOUR DESTINATION");
+    this.setTitle("Pick Your Destination");
   }
   async getHtml() {
     return `

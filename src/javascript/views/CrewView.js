@@ -6,7 +6,7 @@ import commander from "../../assets/crew/image-douglas-hurley.webp";
 export default class extends TemplateView {
   constructor() {
     super();
-    this.setTitle("MEET THE CREW");
+    this.setTitle("Meet The Crew");
   }
   async getHtml() {
     return `
