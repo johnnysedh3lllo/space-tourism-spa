@@ -1,6 +1,6 @@
 # Space Tourism Website (SPA)
 
-This is a landing page containing 4 pages all themed towards space exploration. this project was built as a single page application (note: the decision to build it as such was personal, mainly to increase the difficulty and to better understand the concept of single page applications.
+This is a landing page containing 4 pages all themed towards space exploration. this project was built as a single page application (note: the decision to build it as such was personal, mainly to increase the difficulty and to better understand the concept of single page applications).
 
 ## Cast
 - Vanilla Javascript as Programming Language
